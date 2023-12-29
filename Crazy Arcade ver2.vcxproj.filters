@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\00.FrameWork">
+      <UniqueIdentifier>{640124dc-c814-49e9-8a48-290a70110f97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Crazy Arcade ver2">
+      <UniqueIdentifier>{2332ef6d-ec09-44f4-93c3-65d36e896c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02.GameCore">
+      <UniqueIdentifier>{46357af3-4b5b-4128-9f9c-c260a8b815be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object">
+      <UniqueIdentifier>{096b08ce-d00c-42d5-9e31-a51811d82e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04.DbBuf">
+      <UniqueIdentifier>{f6a8a7fc-4a22-4c3e-9728-cfdf9b1af45c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\05.Vector">
+      <UniqueIdentifier>{5c1d9c5e-d88a-41e0-a522-b6cc4a7f66aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\06.Screen">
+      <UniqueIdentifier>{f2172766-b317-4fa0-b150-5efff7ba52c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\07.Collison">
+      <UniqueIdentifier>{5b693ecf-6758-43f8-afd3-63a793b9b12b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\08.Image">
+      <UniqueIdentifier>{0df8fb9b-132e-491e-b0a7-296bd27c7a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\09.Manager">
+      <UniqueIdentifier>{da398e8e-f003-4e2c-8eb1-c1e052f146bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object\Player">
+      <UniqueIdentifier>{73bc285e-83a8-481f-81e1-78129f58f292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object\Block">
+      <UniqueIdentifier>{409f3914-a377-4af9-a278-153ceceac028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object\Bomb">
+      <UniqueIdentifier>{b0cf373c-a821-4a56-82f6-3e4aee829e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.Object\Item">
+      <UniqueIdentifier>{732b23f8-33cd-42bd-b7cd-27e293623027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\미사용">
+      <UniqueIdentifier>{21983820-6c6b-4fa6-a2ba-5c403411195b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\03.Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="Lobby.h">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="DbBuf.h">
+      <Filter>소스 파일\04.DbBuf</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCore.h">
+      <Filter>소스 파일\02.GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Crazy Arcade ver2.h">
+      <Filter>소스 파일\01.Crazy Arcade ver2</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>소스 파일\09.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>소스 파일\03.Object\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Collison.h">
+      <Filter>소스 파일\07.Collison</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일\03.Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>소스 파일\03.Object\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="myJson.h">
+      <Filter>소스 파일\08.Image</Filter>
+    </ClInclude>
+    <ClInclude Include="dist\json\json.h">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="dist\json\json-forwards.h">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>소스 파일\03.Object\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="Shadow.h">
+      <Filter>소스 파일\03.Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>소스 파일\미사용</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>소스 파일\미사용</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\03.Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Lobby.cpp">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="DbBuf.cpp">
+      <Filter>소스 파일\04.DbBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCore.cpp">
+      <Filter>소스 파일\02.GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Crazy Arcade ver2.cpp">
+      <Filter>소스 파일\01.Crazy Arcade ver2</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>소스 파일\09.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>소스 파일\06.Screen</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>소스 파일\03.Object\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Collison.cpp">
+      <Filter>소스 파일\07.Collison</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\03.Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>소스 파일\03.Object\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="myJson.cpp">
+      <Filter>소스 파일\08.Image</Filter>
+    </ClCompile>
+    <ClCompile Include="dist\jsoncpp.cpp">
+      <Filter>소스 파일\00.FrameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>소스 파일\03.Object\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="Shadow.cpp">
+      <Filter>소스 파일\03.Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>소스 파일\미사용</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>소스 파일\미사용</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Crazy Arcade ver2.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Crazy Arcade ver2.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Image\block\block_1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Image\block\block_1_pop.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Image\BackGround.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
