@@ -18,22 +18,29 @@ private:
 	float fX, fY;
 	BITMAP bit;
 	int bx, by;
-	HBITMAP ItemBit, ShadowBit;
-	HBITMAP ItemOld, ShadowOld;
-	BITMAP ItemBitmap, Shadowbitmap;
+	HBITMAP ItemBit;
+	HBITMAP ItemOld;
+	int BitmapWidth = 0;
+	int BitmapHeight = 0;
+	BITMAP ItemBitmap;
 	RECT ItemRECT;
 	myJson parseJson;
-	int ItemFrameX;
+	int ItemFrameX = 0;
 	float fItemX, fItemY = 0;
 	int ItemX;
 	int CollisonPlayer = 0; // 충돌 여부
+
+	// 아이템의 효과
+
+	int nBombMax = 0; // 물풍선 갯수
+	float fSpeedMax = 0.0f; // 속도
+	int nBombLength = 0; // 물풍선 길이
 public:
 	Item();
 	~Item();
-	void Initialize(HDC hdc);
+	void Initialize(HDC hdc, ItemType myType);
 	void Progress();
-	void PlayerMove();
-	void Render(HDC hdc, int nState); // 게임 플레이 용;
+	void Render(HDC hdc); // 게임 플레이 용;
 	int getWidth(const char* chFileName);
 	int getHeight(const char* chFileName);
 	float getX(const char* chFileName);

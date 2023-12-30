@@ -23,6 +23,7 @@ void GameCore::Initialize()
 	myPlayer.Initialize(myHDC);
 	myShadow.Initialize(myHDC);
 	myBlock.Initialize(myHDC);
+	myItem.Initialize(myHDC, ItemType::BALLON);
 	myBomb.Initialize(myHDC);
 	myWave.Initialize(myHDC);
 	myDbBuf.Initialize();
@@ -184,6 +185,8 @@ void GameCore::Render()
 				}
 			}
 		}
+
+		myItem.Render(myDbBuf.ReturnBackDC());
 
 		myPlayer.Render(myDbBuf.ReturnBackDC(), nPlayerState, 1);
 	}

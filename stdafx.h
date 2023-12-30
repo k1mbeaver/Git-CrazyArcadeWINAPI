@@ -40,6 +40,14 @@ enum Direction
     Down
 };
 
+enum ItemType
+{
+    BALLON,
+    POTION,
+    POTIONMAX,
+    SKATE
+};
+
 extern POINT ptMouse;
 extern Vector2 myXY;
 extern DWORD currentTime;

@@ -2556,58 +2556,30 @@
 			"LocateY": 230
 		}
 	],
-	"skate1" : [
+	"skate" : [
 		{
-			"ImageLink" : "Image\\item\\skate1.bmp",
+			"ImageLink" : "Image\\item\\skate.bmp",
 			"Width" : 56,
 			"Height" : 70
 		}
 	],
-	"skate2" : [
+	"ballon" : [
 		{
-			"ImageLink" : "Image\\item\\skate2.bmp",
+			"ImageLink" : "Image\\item\\ballon.bmp",
 			"Width" : 56,
 			"Height" : 70
 		}
 	],
-	"ballon1" : [
+	"potionmax" : [
 		{
-			"ImageLink" : "Image\\item\\ballon1.bmp",
+			"ImageLink" : "Image\\item\\potionmax.bmp",
 			"Width" : 56,
 			"Height" : 70
 		}
 	],
-	"ballon2" : [
+	"potion" : [
 		{
-			"ImageLink" : "Image\\item\\ballon2.bmp",
-			"Width" : 56,
-			"Height" : 70
-		}
-	],
-	"potionmax1" : [
-		{
-			"ImageLink" : "Image\\item\\potionmax1.bmp",
-			"Width" : 56,
-			"Height" : 70
-		}
-	],
-	"potionmax2" : [
-		{
-			"ImageLink" : "Image\\item\\potionmax2.bmp",
-			"Width" : 56,
-			"Height" : 70
-		}
-	],
-	"potion1" : [
-		{
-			"ImageLink" : "Image\\item\\potion1.bmp",
-			"Width" : 56,
-			"Height" : 70
-		}
-	],
-	"potion2" : [
-		{
-			"ImageLink" : "Image\\item\\potion2.bmp",
+			"ImageLink" : "Image\\item\\potion.bmp",
 			"Width" : 56,
 			"Height" : 70
 		}
