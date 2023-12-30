@@ -30,11 +30,13 @@ private:
 	int CollisonPlayer = 0; // 충돌 여부
 	int nBanCount = 0;
 	int nBanWay = 0;
+	float PlayerSpeed = 1.0f; // Default = 1.0f, 속도 아이템을 먹을 수록 점점 증가한다 1.0f 씩
 public:
 	Player();
 	~Player();
 	void Initialize(HDC hdc);
 	void Progress();
+	void PlayerMove();
 	void Render(HDC hdc, int nPlayerState, int nState); // 게임 플레이 용;
 	void Render(HDC hdc, int nState); // 로비용;
 	int getWidth(const char* chFileName);

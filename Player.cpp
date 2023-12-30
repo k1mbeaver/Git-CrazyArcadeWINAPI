@@ -22,21 +22,26 @@ void Player::Initialize(HDC hdc)
 
 void Player::Progress()
 {
+	
+}
+
+void Player::PlayerMove()
+{
 	if (bMove)
 	{
 		switch (nPlayerWay)
 		{
 		case VK_LEFT:
-			myXY.myX -= 5.0f;
+			myXY.myX -= PlayerSpeed;
 			break;
 		case VK_UP:
-			myXY.myY -= 5.0f;
+			myXY.myY -= PlayerSpeed;
 			break;
 		case VK_RIGHT:
-			myXY.myX += 5.0f;
+			myXY.myX += PlayerSpeed;
 			break;
 		case VK_DOWN:
-			myXY.myY += 5.0f;
+			myXY.myY += PlayerSpeed;
 			break;
 		default:
 			break;
@@ -233,16 +238,16 @@ void Player::pushbackPlayer(Direction myDirection)
 	switch (myDirection)
 	{
 	case Up:
-		myXY.myY -= 2.f;
+		myXY.myY -= PlayerSpeed;
 		break;
 	case Down:
-		myXY.myY += 2.f;
+		myXY.myY += PlayerSpeed;
 		break;
 	case Right:
-		myXY.myX += 2.f;
+		myXY.myX += PlayerSpeed;
 		break;
 	case Left:
-		myXY.myX -= 2.f;
+		myXY.myX -= PlayerSpeed;
 	case None:
 		break;
 	}

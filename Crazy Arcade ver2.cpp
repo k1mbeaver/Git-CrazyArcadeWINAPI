@@ -221,7 +221,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
     case WM_KEYUP:
     {
-        nBanCount = 0;
         bMove = false;
         break;
     }
@@ -252,8 +251,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         case VK_SPACE:
             nBomb = VK_SPACE; // 물풍선 설치를 위함
             break;
-        default:
-            nPlayerWay = 0;
         }
         break;
     }

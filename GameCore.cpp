@@ -30,6 +30,8 @@ void GameCore::Initialize()
 
 void GameCore::Progress()
 {
+	myPlayer.PlayerMove();
+
 	if (nCurrent == 0)
 	{
 		nInitNum = myLogin.Progress(nCurrent);
@@ -117,8 +119,6 @@ void GameCore::Progress()
 
 		// 충돌 프레임
 		nFrame++;
-
-		myPlayer.Progress();
 	}
 
 	else if (nCurrent == 3) // 게임 오버
