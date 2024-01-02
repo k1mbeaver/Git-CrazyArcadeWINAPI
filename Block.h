@@ -18,6 +18,7 @@ typedef struct MapPosition
 	int BreakCount = 1; // 부서진 횟수
 	RECT BlockRECT;
 }MapInfo;
+
 class Block
 {
 private:

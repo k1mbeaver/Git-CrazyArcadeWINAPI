@@ -2,7 +2,7 @@
 Item::Item() {}
 Item::~Item() {}
 
-void Item::Initialize(HDC hdc, ItemType myType)
+void Item::Initialize(HDC hdc, int myType)
 {
 	// Initialize에서 각 이미지들의 정보를 저장해 놓으면?
 
@@ -48,12 +48,12 @@ void Item::Render(HDC hdc) // 게임 플레이 화면 용
 {
 	
 	ItemOld = (HBITMAP)SelectObject(myDC, ItemBit);
-	TransparentBlt(hdc, 300, 300, BitmapWidth, BitmapHeight, myDC, ItemFrameX, 0, BitmapWidth, BitmapHeight, RGB(255, 0, 255));
+	TransparentBlt(hdc, ItemX, ItemY, BitmapWidth, BitmapHeight, myDC, ItemFrameX, 0, BitmapWidth, BitmapHeight, RGB(255, 0, 255));
 	
-	fFrameDelay += dDT;
-	if (fFrameDelay > 0.11f)
+	fItemDelay += dDT;
+	if (fItemDelay > 0.11f)
 	{
-		fFrameDelay = 0;
+		fItemDelay = 0;
 		ItemFrameX += 56;
 
 		if (ItemFrameX >= 112)

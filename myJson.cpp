@@ -52,6 +52,20 @@ int myJson::getMyObjectHeight(const char* chFileName)
 	return nObject;
 }
 
+int myJson::getMapItemCount(const char* chFileName)
+{
+	nObject = 0;
+
+	Json::Value myobject = root[chFileName];
+
+	for (Json::ValueIterator it = myobject.begin(); it != myobject.end(); it++)
+	{
+		nObject = (*it)["Count"].asInt();
+	}
+
+	return nObject;
+}
+
 float myJson::getMyObjectX(const char* chFileName)
 {
 	fObject = 0;

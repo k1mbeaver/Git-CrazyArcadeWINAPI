@@ -4,8 +4,8 @@ Player::~Player() {}
 
 void Player::Initialize(HDC hdc)
 {
-	myXY.myX = 500;
-	myXY.myY = 500;
+	myXY.myX = 300;
+	myXY.myY = 100;
 
 	// Initialize에서 각 이미지들의 정보를 저장해 놓으면?
 

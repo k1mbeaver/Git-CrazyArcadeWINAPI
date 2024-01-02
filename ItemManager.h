@@ -2,6 +2,8 @@
 #include "stdafx.h"
 #include "Define.h"
 #include "myJson.h"
+#include "Item.h"
+#include <vector>
 #include <random>
 
 // 여기서 아이템의 정보 구조체?
@@ -32,6 +34,9 @@ private:
 	int ItemX;
 	int CollisonPlayer = 0; // 충돌 여부
 
+	// 아이템 배열
+	vector<Item*> myItem;
+
 	// 아이템의 효과
 
 	int nBombMax = 0; // 물풍선 갯수
@@ -44,6 +49,7 @@ public:
 	void Progress();
 	void Render(HDC hdc); // 게임 플레이 용;
 	int RandomTransform(int min, int max);
-	int GetRandomX();
-	int GetRandomY();
+	int GetRandomPosition();
+	void CheckRandomPosition(int& nPosition);
+	int GetRandomType();
 };

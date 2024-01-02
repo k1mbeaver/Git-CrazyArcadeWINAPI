@@ -33,6 +33,7 @@ public:
 	bool getMapBreak(int nCount); // 블럭의 파괴여부 불러오기
 	int getMapWidth(int nCount); // 블럭의 너비 불러오기
 	int getMapHeight(int nCount); // 블럭의 높이 불러오기
+	int getMapItemCount(const char* chFileName);
 
 	//string getObjectLink();
 };
