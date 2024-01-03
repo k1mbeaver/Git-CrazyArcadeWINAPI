@@ -37,6 +37,7 @@ public:
 
 	// 아이템의 좌표
 	int ItemX, ItemY = 0;
+	int nItemType = 0;
 public:
 	Item();
 	~Item();
@@ -47,5 +48,5 @@ public:
 	int getHeight(const char* chFileName);
 	float getX(const char* chFileName);
 	float getY(const char* chFileName);
-	RECT& getItemRECT(float fX, float fY);
+	RECT& getItemRECT();
 };

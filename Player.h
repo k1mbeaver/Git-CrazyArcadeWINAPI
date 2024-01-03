@@ -31,6 +31,8 @@ private:
 	int nBanCount = 0;
 	int nBanWay = 0;
 	float PlayerSpeed = 1.0f; // Default = 1.0f, 속도 아이템을 먹을 수록 점점 증가한다 1.0f 씩
+	int PlayerBomb = 1;
+	int PlayerPotion = 1;
 public:
 	Player();
 	~Player();
@@ -39,6 +41,7 @@ public:
 	void PlayerMove();
 	void Render(HDC hdc, int nPlayerState, int nState); // 게임 플레이 용;
 	void Render(HDC hdc, int nState); // 로비용;
+	void GetItem(int nItemType);
 	int getWidth(const char* chFileName);
 	int getHeight(const char* chFileName);
 	float getX(const char* chFileName);

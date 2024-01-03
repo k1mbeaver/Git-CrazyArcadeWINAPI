@@ -225,6 +225,28 @@ RECT& Player::getPlayerRECT(float fX, float fY)
 	return PlayerRECT;
 }
 
+void Player::GetItem(int nItemType)
+{
+	switch (nItemType)
+	{
+	case BALLON:
+		PlayerBomb += 1;
+		break;
+
+	case POTION:
+		PlayerPotion += 1;
+		break;
+
+	case POTIONMAX:
+		PlayerPotion += 10;
+		break;
+
+	case SKATE:
+		PlayerSpeed += 1.0f;
+		break;
+	}
+
+}
 
 // 플레이어와 무언가가 충돌하였을 때 통과시키지 않고 밀어내기
 void Player::pushbackPlayer(Direction myDirection)

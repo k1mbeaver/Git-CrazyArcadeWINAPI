@@ -9,6 +9,8 @@ void Item::Initialize(HDC hdc, int myType)
 	parseJson.Initialize();
 	myDC = CreateCompatibleDC(hdc);
 
+	nItemType = myType;
+
 	const char* myBitName = "";
 
 	switch (myType)
@@ -95,15 +97,14 @@ float Item::getY(const char* chFileName)
 	return fY;
 }
 
-RECT& Item::getItemRECT(float fX, float fY)
+RECT& Item::getItemRECT()
 {
-	/*
-	ItemRECT.left = fX + 20;
-	ItemRECT.top = fY + 20;
+	
+	ItemRECT.left = ItemX + 20;
+	ItemRECT.top = ItemY + 20;
 	ItemRECT.right = ItemRECT.left + BitmapWidth - 20;
 	ItemRECT.bottom = ItemRECT.top + BitmapHeight - 20;
 
-	*/
 	return ItemRECT;
 	
 }

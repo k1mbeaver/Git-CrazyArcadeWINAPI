@@ -34,6 +34,7 @@ private:
 	int ItemX;
 	int CollisonPlayer = 0; // 충돌 여부
 
+public:
 	// 아이템 배열
 	vector<Item*> myItem;
 
@@ -48,6 +49,7 @@ public:
 	void Initialize(HDC hdc);
 	void Progress();
 	void Render(HDC hdc); // 게임 플레이 용;
+	void DeleteItem(int nIndex);
 	int RandomTransform(int min, int max);
 	int GetRandomPosition();
 	void CheckRandomPosition(int& nPosition);

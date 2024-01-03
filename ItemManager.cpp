@@ -47,6 +47,12 @@ void ItemManager::Render(HDC hdc)
 	}
 }
 
+void ItemManager::DeleteItem(int nIndex)
+{
+	delete myItem[nIndex];
+	myItem.erase(myItem.begin() + nIndex, myItem.begin() + nIndex + 1);
+}
+
 int ItemManager::RandomTransform(int max, int min)
 {
 	std::random_device rd;
