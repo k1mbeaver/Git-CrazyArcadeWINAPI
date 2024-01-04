@@ -73,6 +73,18 @@ void GameCore::Progress()
 					}
 				}
 			}
+
+			for (int nIndex = 0; nIndex < myItemManager.myItem.size(); nIndex++)
+			{
+				if (myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myItemManager.myItem[nIndex]->getItemRECT()) != None)
+				{
+					myPlayer.GetItem(myItemManager.myItem[nIndex]->nItemType);
+					//int nMyItemType = myItemManager.myItem[nIndex]->nItemType;
+					myItemManager.DeleteItem(nIndex);
+
+					break;
+				}
+			}
 			nFrame = 0;
 		}
 
@@ -113,20 +125,7 @@ void GameCore::Progress()
 			nGameOverCount = 300; // 게임 오버 화면 카운트 시작
 			myDbBuf.DeleteScreen(); // 화면 초기화
 		}
-
-		// 아이템 획득시에
-		for (int nIndex = 0; nIndex < myItemManager.myItem.size(); nIndex++)
-		{
-			if (myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myItemManager.myItem[nIndex]->getItemRECT()) != None)
-			{
-				myPlayer.GetItem(myItemManager.myItem[nIndex]->nItemType);
-				int nMyItemType = myItemManager.myItem[nIndex]->nItemType;
-				myItemManager.DeleteItem(nMyItemType);
-				
-				break;
-			}
-		}
-
+		
 		// 타이머 줄이기
 		nBombCount--;
 		nPlayerTrap--;
