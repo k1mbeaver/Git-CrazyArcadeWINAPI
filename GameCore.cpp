@@ -88,14 +88,14 @@ void GameCore::Progress()
 			nFrame = 0;
 		}
 
-		// 플레이중 스페이스 바를 누르고, 화면에 물풍선이 존재하지 않을 때
-		if (nBomb == VK_SPACE && nBombState == 1)
+		// 플레이중 스페이스 바를 누르고, 플레이어의 물풍선 갯수가 남아있을 떄
+		if (nBomb == VK_SPACE && myPlayer.PlayerBomb != 0)
 		{
 			myBomb.CreateBomb(myXY.myX, myXY.myY);
 			// 버튼 초기화
 			nBomb = 0;
 			// 물풍선 남은 갯수
-			nBombState = 0;
+			myPlayer.PlayerBomb = 0;
 			// 타이머 시작
 			nBombCount = 150;
 			// 물줄기 프레임 초기화

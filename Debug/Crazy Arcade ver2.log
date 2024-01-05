@@ -1,3 +1,54 @@
-﻿  GameCore.cpp
+﻿  Bomb.cpp
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(24,51): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(24,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(43,51): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(43,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(120,34): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(121,29): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(122,35): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(123,36): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(132,31): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(133,34): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(134,36): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Bomb.cpp(135,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BombManager.cpp
+  Crazy Arcade ver2.cpp
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Crazy Arcade ver2.cpp(19,19): warning C4244: '초기화 중': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Crazy Arcade ver2.cpp(20,16): warning C4244: '초기화 중': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Crazy Arcade ver2.cpp(103,40): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Crazy Arcade ver2.cpp(108,48): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Crazy Arcade ver2.cpp(109,42): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameCore.cpp
 D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\GameCore.cpp(77,32): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  ItemManager.cpp
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\ItemManager.cpp(8,30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\ItemManager.cpp(28,37): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\ItemManager.cpp(29,37): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\ItemManager.cpp(44,30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Player.cpp
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(62,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(62,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(66,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(66,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(70,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(70,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(74,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(74,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(78,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(78,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(89,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(89,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(93,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(93,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(97,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(97,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(101,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(101,29): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(129,16): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(130,16): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(171,45): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(171,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(220,23): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Player.cpp(221,22): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   Crazy Arcade ver2.vcxproj -> D:\김승욱\김승욱\연구실 공부\포트폴리오\허승찬 선배님 스터디\크레이지 아케이드\Crazy Arcade ver2\Crazy Arcade ver2\Debug\Crazy Arcade ver2.exe

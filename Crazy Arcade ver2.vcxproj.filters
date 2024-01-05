@@ -129,6 +129,9 @@
     <ClInclude Include="ItemManager.h">
       <Filter>소스 파일\09.Manager</Filter>
     </ClInclude>
+    <ClInclude Include="BombManager.h">
+      <Filter>소스 파일\09.Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -186,6 +189,9 @@
       <Filter>소스 파일\미사용</Filter>
     </ClCompile>
     <ClCompile Include="ItemManager.cpp">
+      <Filter>소스 파일\09.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BombManager.cpp">
       <Filter>소스 파일\09.Manager</Filter>
     </ClCompile>
   </ItemGroup>

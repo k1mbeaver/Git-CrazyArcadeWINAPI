@@ -30,6 +30,8 @@ private:
 	int CollisonPlayer = 0; // 충돌 여부
 	int nBanCount = 0;
 	int nBanWay = 0;
+
+public:
 	float PlayerSpeed = 1.0f; // Default = 1.0f, 속도 아이템을 먹을 수록 점점 증가한다 1.0f 씩
 	int PlayerBomb = 1;
 	int PlayerPotion = 1;

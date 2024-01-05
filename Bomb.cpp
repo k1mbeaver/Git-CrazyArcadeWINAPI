@@ -11,7 +11,7 @@ void Bomb::Initialize(HDC hdc)
 	Bombbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("Bomb").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	BombPopbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("BombPop").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 
-	nBombCount = 1; // 물풍선 갯수 1개로 초기화
+	nBombCount = 200; // 물풍선 타이머 설정
 }
 
 void Bomb::Progress()
