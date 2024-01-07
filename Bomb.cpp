@@ -16,6 +16,7 @@ void Bomb::Initialize(HDC hdc)
 
 void Bomb::Progress()
 {
+	nBombCount--;
 }
 
 void Bomb::Render(HDC hdc) // ¹°Ç³¼± ¼³Ä¡

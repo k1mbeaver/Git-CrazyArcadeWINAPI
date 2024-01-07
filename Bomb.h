@@ -19,15 +19,23 @@ class Bomb
 private:
 	HWND myHWND;
 	HDC myDC;
-	int nBombCount = 0;
 	int nBombSecond = 0;
 	HBITMAP Bombbit, BombPopbit;
 	HBITMAP Bombold, BombPopold;
 	BITMAP Bombbitmap, BombPopbitmap;
 	myJson parseJson;
-	BombInfo myCreateBomb;
 	int FrameX, BombFrameX = 0;
 	int PopFrameX = 0;
+
+public:
+	// 위치를 위한 구조체
+	BombInfo myCreateBomb;
+
+	// 길이
+	int nBombLength = 1;
+
+	// 제한시간
+	int nBombCount = 0;
 public:
 	Bomb();
 	~Bomb();

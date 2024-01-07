@@ -24,7 +24,7 @@ private:
 	int CollisonPlayer = 0; // 충돌 여부
 
 public:
-	// 아이템 배열
+	// 아이템 배열, 벡터로 하는게 맞는듯함
 	vector<Bomb*> myBomb;
 public:
 	BombManager();
@@ -32,5 +32,6 @@ public:
 	void Initialize(HDC hdc);
 	void Progress();
 	void Render(HDC hdc); // 게임 플레이 용;
-	void DeleteBomb();
+	void CreateBomb(float PlayerX, float PlayerY, int nLength); // 물풍선 설치, 매개변수 = 현재 캐릭터의 좌표, 물풍선 길이
+	void DeleteBomb(); // 물풍선 펑
 };
