@@ -14,6 +14,7 @@
 #include "Wave.h"
 #include "Item.h"
 #include "ItemManager.h"
+#include "BombManager.h"
 
 //나머지 게임에 관련된 클래스가 있는 헤더를 추가한다.
 extern HINSTANCE hInst;                                // 현재 인스턴스입니다.
@@ -36,6 +37,7 @@ private:
 	Wave myWave;
 	Item myItem;
 	ItemManager myItemManager;
+	BombManager myBombManager;
 	Collison myCollison;
 	myJson parseJson;
 	int nCurrent = 0;

@@ -40,7 +40,7 @@ public:
 	Bomb();
 	~Bomb();
 	void Initialize(HDC hdc);
-	void Progress();
+	bool Progress();
 	void Render(HDC hdc); // ¹°Ç³¼± ¼³Ä¡
 	void BombRender(HDC hdc); // ¹°Ç³¼± ÆøÆÄ½Ã
 	int getWidth(const char* chFileName);

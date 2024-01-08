@@ -32,6 +32,6 @@ public:
 	void Initialize(HDC hdc);
 	void Progress();
 	void Render(HDC hdc); // 게임 플레이 용;
-	void CreateBomb(float PlayerX, float PlayerY, int nLength); // 물풍선 설치, 매개변수 = 현재 캐릭터의 좌표, 물풍선 길이
+	void CreateBomb(float PlayerX, float PlayerY, int nLength, HDC hdc); // 물풍선 설치, 매개변수 = 현재 캐릭터의 좌표, 물풍선 길이
 	void DeleteBomb(); // 물풍선 펑
 };

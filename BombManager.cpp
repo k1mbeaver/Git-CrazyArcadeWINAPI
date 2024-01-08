@@ -16,18 +16,35 @@ void BombManager::Initialize(HDC hdc)
 
 void BombManager::Render(HDC hdc)
 {
-
+	if (!myBomb.empty())
+	{
+		for (int nIndex = 0; nIndex < myBomb.size(); nIndex++)
+		{
+			myBomb[nIndex]->Render(hdc);
+		}
+	}
 }
 
 void BombManager::Progress()
 {
 	// 타이머 재서 DeleteBomb 사용
+	if (!myBomb.empty())
+	{
+		for (int nIndex = 0; nIndex < myBomb.size(); nIndex++)
+		{
+			if (myBomb[nIndex]->Progress() == false)
+			{
+				DeleteBomb();
+			}
+		}
+	}
 }
 
-void BombManager::CreateBomb(float PlayerX, float PlayerY, int nLength)
+void BombManager::CreateBomb(float PlayerX, float PlayerY, int nLength, HDC hdc)
 {
 	Bomb* newBomb = new Bomb;
 
+	newBomb->Initialize(hdc);
 	newBomb->myCreateBomb.fX = PlayerX;
 	newBomb->myCreateBomb.fY = PlayerY;
 	newBomb->myCreateBomb.myExist = true;
@@ -39,5 +56,6 @@ void BombManager::DeleteBomb()
 {
 	delete myBomb[0];
 	// 여기서 메모리 관리 어떻게 할건지?
-	//myBomb.pop();
+	myBomb.erase(myBomb.begin());
+	myBomb.shrink_to_fit();
 }

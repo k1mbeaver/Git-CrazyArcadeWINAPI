@@ -88,9 +88,12 @@ void GameCore::Progress()
 			nFrame = 0;
 		}
 
+		myBombManager.Progress();
+
 		// 플레이중 스페이스 바를 누르고, 플레이어의 물풍선 갯수가 남아있을 떄
 		if (nBomb == VK_SPACE && myPlayer.PlayerBomb != 0)
 		{
+			/*
 			myBomb.CreateBomb(myXY.myX, myXY.myY);
 			// 버튼 초기화
 			nBomb = 0;
@@ -100,6 +103,8 @@ void GameCore::Progress()
 			nBombCount = 150;
 			// 물줄기 프레임 초기화
 			myWave.InitializeFrameX();
+			*/
+			myBombManager.CreateBomb(myXY.myX, myXY.myY, 1, myHDC);
 		}
 
 		// 물줄기와 캐릭터의 충돌처리
@@ -177,6 +182,7 @@ void GameCore::Render()
 
 		myBlock.Render(myDbBuf.ReturnBackDC());
 
+		/*
 		// 물풍선 객체가 존재 할때
 		if (nBombState == 0)
 		{
@@ -197,7 +203,9 @@ void GameCore::Render()
 				}
 			}
 		}
+		*/
 
+		myBombManager.Render(myDbBuf.ReturnBackDC());
 		myItemManager.Render(myDbBuf.ReturnBackDC());
 
 		myPlayer.Render(myDbBuf.ReturnBackDC(), nPlayerState, 1);

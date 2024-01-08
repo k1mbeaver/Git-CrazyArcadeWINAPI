@@ -14,9 +14,19 @@ void Bomb::Initialize(HDC hdc)
 	nBombCount = 200; // 물풍선 타이머 설정
 }
 
-void Bomb::Progress()
+bool Bomb::Progress()
 {
 	nBombCount--;
+
+	if (nBombCount == 0)
+	{
+		return false;
+	}
+
+	else
+	{
+		return true;
+	}
 }
 
 void Bomb::Render(HDC hdc) // 물풍선 설치
