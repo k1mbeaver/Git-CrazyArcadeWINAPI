@@ -34,7 +34,7 @@ private:
 	Lobby myLobby;
 	Block myBlock;
 	Bomb myBomb;
-	Wave myWave;
+	//Wave myWave;
 	Item myItem;
 	ItemManager myItemManager;
 	BombManager myBombManager;

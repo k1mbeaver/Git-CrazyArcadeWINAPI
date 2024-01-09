@@ -104,10 +104,10 @@ void Player::Render(HDC hdc, int nPlayerState, int nState) // °ÔÀÓ ÇÃ·¹ÀÌ È­¸é ¿
 		}
 
 		// ¾Ö´Ï¸ÞÀÌ¼Ç Ãâ·ÂÀ» À§ÇÑ ÇÁ·¹ÀÓ
-		fFrameDelay += dDT;
-		if (fFrameDelay > 0.1f)
+		PlayerFrameDelay += dDT;
+		if (PlayerFrameDelay > 0.1f)
 		{
-			fFrameDelay = 0;
+			PlayerFrameDelay = 0;
 			UDFrameX += 64;
 			LRFrameX += 64;
 			if (UDFrameX >= 512)
@@ -138,12 +138,12 @@ void Player::Render(HDC hdc, int nPlayerState, int nState) // °ÔÀÓ ÇÃ·¹ÀÌ È­¸é ¿
 		}
 
 		// ¾Ö´Ï¸ÞÀÌ¼Ç Ãâ·ÂÀ» À§ÇÑ ÇÁ·¹ÀÓ
-		fFrameDelay += dDT;
+		PlayerFrameDelay += dDT;
 
-		if (fFrameDelay > 0.1f)
+		if (PlayerFrameDelay > 0.1f)
 		{
 
-			fFrameDelay = 0;
+			PlayerFrameDelay = 0;
 			TrapFrameX += 88;
 		}
 
@@ -153,10 +153,10 @@ void Player::Render(HDC hdc, int nPlayerState, int nState) // °ÔÀÓ ÇÃ·¹ÀÌ È­¸é ¿
 			TransparentBlt(hdc, nDieX, nDieY, getWidth("BazziDie"), getHeight("BazziDie"), myDC, DieFrameX, 0, getWidth("BazziDie"), getHeight("BazziDie"), RGB(255, 0, 255));
 
 			// ¾Ö´Ï¸ÞÀÌ¼Ç Ãâ·ÂÀ» À§ÇÑ ÇÁ·¹ÀÓ
-			fFrameDelay2 += dDT;
-			if (fFrameDelay2 > 0.2f)
+			PlayerFrameDelay += dDT;
+			if (PlayerFrameDelay > 0.2f)
 			{
-				fFrameDelay2 = 0;
+				PlayerFrameDelay = 0;
 				DieFrameX += 88;
 			}
 		}
@@ -170,10 +170,10 @@ void Player::Render(HDC hdc, int nState) // ·Îºñ¿ë
 	Jumpold = (HBITMAP)SelectObject(myDC, Jumpbit);
 	TransparentBlt(hdc, getX("BazziJump"), getY("BazziJump"), getWidth("BazziJump"), getHeight("BazziJump"), myDC, JumpFrameX, 0, getWidth("BazziJump"), getHeight("BazziJump"), RGB(255, 0, 255));
 
-	fFrameDelay += dDT;
-	if (fFrameDelay > 0.5f)
+	LobbyFrameDelay += dDT;
+	if (LobbyFrameDelay > 0.5f)
 	{
-		fFrameDelay = 0;
+		LobbyFrameDelay = 0;
 		JumpFrameX += 64;
 		if (JumpFrameX >= 512)
 		{
@@ -234,11 +234,11 @@ void Player::GetItem(int nItemType)
 		break;
 
 	case POTION:
-		PlayerPotion += 1;
+		BombLength += 1;
 		break;
 
 	case POTIONMAX:
-		PlayerPotion += 10;
+		BombLength += 10;
 		break;
 
 	case SKATE:

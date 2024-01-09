@@ -11,6 +11,7 @@ typedef struct BombPosition
 {
 	float fX = 0; // xÁÂÇ¥
 	float fY = 0; // yÁÂÇ¥
+	int WaveLength = 1;
 	bool myExist = false;
 }BombInfo;
 
@@ -20,12 +21,15 @@ private:
 	HWND myHWND;
 	HDC myDC;
 	int nBombSecond = 0;
-	HBITMAP Bombbit, BombPopbit;
-	HBITMAP Bombold, BombPopold;
+	HBITMAP Bombbit, BombPopbit, PopDownbit, PopUpbit, PopLeftbit, PopRightbit;
+	HBITMAP Bombold, BombPopold, PopDownold, PopUpold, PopLeftold, PopRightold;
 	BITMAP Bombbitmap, BombPopbitmap;
 	myJson parseJson;
 	int FrameX, BombFrameX = 0;
 	int PopFrameX = 0;
+	float BombFrameDelay = 0.0f;
+	int WaveFrameX = 0;
+	float WaveFrameDelay = 0.0f;
 
 public:
 	// À§Ä¡¸¦ À§ÇÑ ±¸Á¶Ã¼
@@ -42,7 +46,7 @@ public:
 	void Initialize(HDC hdc);
 	bool Progress();
 	void Render(HDC hdc); // ¹°Ç³¼± ¼³Ä¡
-	void BombRender(HDC hdc); // ¹°Ç³¼± ÆøÆÄ½Ã
+	bool BombRender(HDC hdc); // ¹°Ç³¼± ÆøÆÄ½Ã
 	int getWidth(const char* chFileName);
 	int getHeight(const char* chFileName);
 	float getX();

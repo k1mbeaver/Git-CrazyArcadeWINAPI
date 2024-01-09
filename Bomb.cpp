@@ -9,6 +9,10 @@ void Bomb::Initialize(HDC hdc)
 	parseJson.Initialize();
 	myDC = CreateCompatibleDC(hdc);
 	Bombbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("Bomb").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	PopDownbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("DownWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	PopUpbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("UpWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	PopLeftbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("LeftWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	PopRightbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("RightWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	BombPopbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("BombPop").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 
 	nBombCount = 200; // 물풍선 타이머 설정
@@ -16,8 +20,6 @@ void Bomb::Initialize(HDC hdc)
 
 bool Bomb::Progress()
 {
-	nBombCount--;
-
 	if (nBombCount == 0)
 	{
 		return false;
@@ -25,6 +27,7 @@ bool Bomb::Progress()
 
 	else
 	{
+		nBombCount--;
 		return true;
 	}
 }
@@ -35,10 +38,10 @@ void Bomb::Render(HDC hdc) // 물풍선 설치
 	TransparentBlt(hdc, myCreateBomb.fX, myCreateBomb.fY, getWidth("Bomb"), getHeight("Bomb"), myDC, FrameX, 0, getWidth("Bomb"), getHeight("Bomb"), RGB(255, 0, 255));
 
 	// 애니메이션 출력을 위한 프레임
-	fFrameDelay += dDT;
-	if (fFrameDelay > 0.1f)
+	BombFrameDelay += dDT;
+	if (BombFrameDelay > 0.1f)
 	{
-		fFrameDelay = 0;
+		BombFrameDelay = 0;
 		FrameX += 56;
 
 		if (FrameX >= 224)
@@ -48,23 +51,46 @@ void Bomb::Render(HDC hdc) // 물풍선 설치
 	}
 }
 
-void Bomb::BombRender(HDC hdc) // 물풍선 폭파
+bool Bomb::BombRender(HDC hdc) // 물풍선 폭파
 {
 	BombPopold = (HBITMAP)SelectObject(myDC, BombPopbit);
-	TransparentBlt(hdc, myCreateBomb.fX, myCreateBomb.fY, getWidth("BombPop"), getHeight("BombPop"), myDC, BombFrameX, 0, getWidth("BombPop"), getHeight("BombPop"), RGB(255, 0, 255)); // 가운데
+	TransparentBlt(hdc, myCreateBomb.fX, myCreateBomb.fY, getWidth("BombPop"), getHeight("BombPop"), myDC, PopFrameX, 0, getWidth("BombPop"), getHeight("BombPop"), RGB(255, 0, 255)); // 가운데
+
+	for (int nIndex = 1; nIndex <= myCreateBomb.WaveLength; nIndex++)
+	{
+		PopDownold = (HBITMAP)SelectObject(myDC, PopDownbit);
+		TransparentBlt(hdc, myCreateBomb.fX, myCreateBomb.fY + nIndex * getHeight("DownWave"), getWidth("DownWave"), getHeight("DownWave"), myDC, WaveFrameX, 0, getWidth("DownWave"), getHeight("DownWave"), RGB(255, 0, 255)); // 아래
+		PopUpold = (HBITMAP)SelectObject(myDC, PopUpbit);
+		TransparentBlt(hdc, myCreateBomb.fX, myCreateBomb.fY - nIndex * getHeight("UpWave"), getWidth("UpWave"), getHeight("UpWave"), myDC, WaveFrameX, 0, getWidth("UpWave"), getHeight("UpWave"), RGB(255, 0, 255)); // 위
+		PopLeftold = (HBITMAP)SelectObject(myDC, PopLeftbit);
+		TransparentBlt(hdc, myCreateBomb.fX - nIndex * getWidth("LeftWave"), myCreateBomb.fY, getWidth("LeftWave"), getHeight("LeftWave"), myDC, WaveFrameX, 0, getWidth("LeftWave"), getHeight("LeftWave"), RGB(255, 0, 255)); // 왼쪽
+		PopRightold = (HBITMAP)SelectObject(myDC, PopRightbit);
+		TransparentBlt(hdc, myCreateBomb.fX + nIndex * getWidth("RightWave"), myCreateBomb.fY, getWidth("RightWave"), getHeight("RightWave"), myDC, WaveFrameX, 0, getWidth("RightWave"), getHeight("RightWave"), RGB(255, 0, 255)); // 오른쪽
+	}
 
 	// 애니메이션 출력을 위한 프레임
-	fFrameDelay += dDT;
-	if (fFrameDelay > 0.1f)
-	{
-		fFrameDelay = 0;
-		BombFrameX += 52; // 가운데
+	WaveFrameDelay += dDT;
 
-		if (BombFrameX >= 312)
+	if (WaveFrameDelay > 0.1f)
+	{
+		WaveFrameDelay = 0;
+		WaveFrameX += 52; // 4방향
+		PopFrameX += 52; // 가운데
+
+		if (PopFrameX >= 312)
 		{
-			BombFrameX = 0;
+			PopFrameX = 0;
+		}
+
+		if (WaveFrameX >= 572)
+		{
+			WaveFrameX = 0;
+
+			return true;
 		}
 	}
+
+	return false;
 }
 
 int Bomb::getWidth(const char* chFileName)

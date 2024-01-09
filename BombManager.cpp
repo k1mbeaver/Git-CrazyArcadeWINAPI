@@ -20,12 +20,23 @@ void BombManager::Render(HDC hdc)
 	{
 		for (int nIndex = 0; nIndex < myBomb.size(); nIndex++)
 		{
-			myBomb[nIndex]->Render(hdc);
+			if (myBomb[nIndex]->nBombCount == 0)
+			{
+				if (myBomb[nIndex]->BombRender(hdc) == true)
+				{
+					DeleteBomb();
+				}
+			}
+
+			else
+			{
+				myBomb[nIndex]->Render(hdc);
+			}
 		}
 	}
 }
 
-void BombManager::Progress()
+void BombManager::Progress(int& nPlayerBomb)
 {
 	// 타이머 재서 DeleteBomb 사용
 	if (!myBomb.empty())
@@ -34,7 +45,7 @@ void BombManager::Progress()
 		{
 			if (myBomb[nIndex]->Progress() == false)
 			{
-				DeleteBomb();
+				nPlayerBomb += 1;
 			}
 		}
 	}
@@ -48,6 +59,7 @@ void BombManager::CreateBomb(float PlayerX, float PlayerY, int nLength, HDC hdc)
 	newBomb->myCreateBomb.fX = PlayerX;
 	newBomb->myCreateBomb.fY = PlayerY;
 	newBomb->myCreateBomb.myExist = true;
+	newBomb->myCreateBomb.WaveLength = nLength;
 
 	myBomb.push_back(newBomb);
 }
