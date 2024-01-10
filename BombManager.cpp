@@ -26,6 +26,11 @@ void BombManager::Render(HDC hdc)
 				{
 					DeleteBomb();
 				}
+
+				else
+				{
+					bBoom = true;
+				}
 			}
 
 			else
@@ -55,11 +60,7 @@ void BombManager::CreateBomb(float PlayerX, float PlayerY, int nLength, HDC hdc)
 {
 	Bomb* newBomb = new Bomb;
 
-	newBomb->Initialize(hdc);
-	newBomb->myCreateBomb.fX = PlayerX;
-	newBomb->myCreateBomb.fY = PlayerY;
-	newBomb->myCreateBomb.myExist = true;
-	newBomb->myCreateBomb.WaveLength = nLength;
+	newBomb->Initialize(hdc, PlayerX, PlayerY, nLength);
 
 	myBomb.push_back(newBomb);
 }
@@ -67,7 +68,9 @@ void BombManager::CreateBomb(float PlayerX, float PlayerY, int nLength, HDC hdc)
 void BombManager::DeleteBomb()
 {
 	delete myBomb[0];
-	// 여기서 메모리 관리 어떻게 할건지?
+
 	myBomb.erase(myBomb.begin());
 	myBomb.shrink_to_fit();
+
+	bBoom = false;
 }

@@ -2,7 +2,7 @@
 Bomb::Bomb() {}
 Bomb::~Bomb() {}
 
-void Bomb::Initialize(HDC hdc)
+void Bomb::Initialize(HDC hdc, float fX, float fY, int nLength)
 {
 	// Initialize에서 각 이미지들의 정보를 저장해 놓으면?
 
@@ -14,6 +14,21 @@ void Bomb::Initialize(HDC hdc)
 	PopLeftbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("LeftWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	PopRightbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("RightWave").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	BombPopbit = (HBITMAP)LoadImage(NULL, parseJson.getMyObjectLink("BombPop").c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+
+	myCreateBomb.fX = fX;
+	myCreateBomb.fY = fY;
+	myCreateBomb.myExist = true;
+	myCreateBomb.WaveLength = nLength;
+
+	WidthWaveRECT.left = myCreateBomb.fX - myCreateBomb.WaveLength * getWidth("LeftWave");
+	WidthWaveRECT.top = myCreateBomb.fY;
+	WidthWaveRECT.right = myCreateBomb.fX + myCreateBomb.WaveLength * getWidth("RightWave") + getWidth("RightWave");
+	WidthWaveRECT.bottom = myCreateBomb.fY + getHeight("DownWave");
+
+	HeightWaveRECT.left = myCreateBomb.fX;
+	HeightWaveRECT.top = myCreateBomb.fY - myCreateBomb.WaveLength * getHeight("UpWave");
+	HeightWaveRECT.right = myCreateBomb.fX + getWidth("RightWave");
+	HeightWaveRECT.bottom = myCreateBomb.fY + myCreateBomb.WaveLength * getHeight("DownWave") + getHeight("DownWave");
 
 	nBombCount = 200; // 물풍선 타이머 설정
 }
@@ -172,4 +187,14 @@ RECT Bomb::getHeightPop()
 	PopHeight.bottom = myCreateBomb.fY + 104;
 
 	return PopHeight;
+}
+
+RECT Bomb::getWidthWave()
+{
+	return WidthWaveRECT;
+}
+
+RECT Bomb::getHeightWave()
+{
+	return HeightWaveRECT;
 }

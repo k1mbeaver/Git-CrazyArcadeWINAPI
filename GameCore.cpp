@@ -23,7 +23,7 @@ void GameCore::Initialize()
 	myPlayer.Initialize(myHDC);
 	myShadow.Initialize(myHDC);
 	myBlock.Initialize(myHDC);
-	myBomb.Initialize(myHDC);
+	//myBomb.Initialize(myHDC);
 	//myWave.Initialize(myHDC);
 	myItemManager.Initialize(myHDC);
 	myBombManager.Initialize(myHDC);
@@ -113,12 +113,24 @@ void GameCore::Progress()
 			nBomb = 0;
 		}
 
+		/*
 		// 물줄기와 캐릭터의 충돌처리
 		if (nBombCount < 20 && (myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myBomb.getHeightPop()) != None 
 			|| myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myBomb.getWidthPop()) != None)) // 물풍선이 터져서 물줄기가 나올때, 캐릭터가 물줄기의 가로 또는 세로에 충돌시
 		{
 			nPlayerState = 1; // 플레이어의 속성을 갇힘으로 설정
 			nPlayerTrap = 300; // 갇혀있는 시간 카운트 시작
+		}
+		*/
+
+		if (myBombManager.bBoom == true)
+		{
+			if (myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myBombManager.myBomb[0]->getWidthWave()) != None ||
+				myCollison.SetNotInterSect(myPlayer.getPlayerRECT(myXY.myX, myXY.myY), myBombManager.myBomb[0]->getHeightWave()) != None)
+			{
+				nPlayerState = 1;
+				nPlayerTrap = 300;
+			}
 		}
 
 		if (nPlayerState == 1 && nPlayerTrap == 0) // 갇혀있는 상태에서 시간 다되면

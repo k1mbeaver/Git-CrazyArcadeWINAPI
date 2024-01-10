@@ -30,6 +30,8 @@ private:
 	float BombFrameDelay = 0.0f;
 	int WaveFrameX = 0;
 	float WaveFrameDelay = 0.0f;
+	RECT WidthWaveRECT;
+	RECT HeightWaveRECT;
 
 public:
 	// 위치를 위한 구조체
@@ -43,7 +45,7 @@ public:
 public:
 	Bomb();
 	~Bomb();
-	void Initialize(HDC hdc);
+	void Initialize(HDC hdc, float fX, float fY, int nLength);
 	bool Progress();
 	void Render(HDC hdc); // 물풍선 설치
 	bool BombRender(HDC hdc); // 물풍선 폭파시
@@ -56,4 +58,6 @@ public:
 	bool ExistBomb();
 	RECT getWidthPop();
 	RECT getHeightPop();
+	RECT getWidthWave();
+	RECT getHeightWave();
 };

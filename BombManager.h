@@ -22,11 +22,11 @@ private:
 	int bx, by;
 	myJson parseJson;
 	int CollisonPlayer = 0; // 충돌 여부
-	bool bBoom = false;
 
 public:
 	// 아이템 배열, 벡터로 하는게 맞는듯함
 	vector<Bomb*> myBomb;
+	bool bBoom = false;
 public:
 	BombManager();
 	~BombManager();
